@@ -8,8 +8,9 @@
 <body>
     <h3>Category LIst</h3>
     <form action="/admin/savecat" method="post">
+        <input type="hidden" name="catid" value="<%= editcat!=''?editcat._id:''%>">
         Name:
-        <input type="text" name="name" id="name">
+        <input type="text" name="name" id="name" value="<%= editcat!=''?editcat.name:''%>">
         <br> <br> <br>
         <input type="submit" value="Save Data">
     </form>
@@ -25,7 +26,7 @@
             <tr>
                 <td><%= index+1%></td>
                 <td><%= i.name %></td>
-                <td><a href="/admin/delcat/<%= i._id %>">Delete</a></td>
+                <td><a href="/admin/editcat/<%= i._id %>">Edit</a> <a href="/admin/delcat/<%= i._id %>">Delete</a></td>
             </tr>
         <% }) %>
     </table>

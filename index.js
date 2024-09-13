@@ -1,32 +1,17 @@
-// /*
-// 1)core module - inbuilt - http
-// 2)Local module - custom - user defined
-// 3)Third-party module - npm download - npm install pkgname
-// */
-// const http = require('http')
-// const {add,area} = require('./add') //local module
+console.log('hi');
+console.log(10+20);
+const { log } = require('console');
+//core module -http 
+//nodemon -- third party module
+const http = require('http')
+const { addition,minus} = require('./add')
 
-// http.createServer((req,res)=>{
-//     res.write("Hellooo...!!!")
-//     res.write("Hiii...!!!")
-//     res.write("Testing...!!!")
-//     res.write("Addition is "+add(25,35))
-//     res.write("Area of circle is "+area(2.5))
-//     res.end()
-// }).listen(3000,()=>{
-//     console.log("listening on 3000 port");    
-// })
-const express = require('express')
-const app = express()
-
-app.get('/', function (req, res) {
-  res.send('Hello World')
+http.createServer((req,res)=>{
+    console.log("Addition is "+addition(25,6));
+    console.log("Minus is "+minus(100,40));   
+    res.write("Helloo")
+    res.end()
+}).listen(5002,()=>{
+    console.log("listening to 5002 port");
 })
-app.get('/home', function (req, res) {
-    res.send('<h1>My Home Page</h1>')
-  })
-  app.get('/about', function (req, res) {
-    res.send('<h1>My About Page</h1>')
-  })
-
-app.listen(4001)
+// http.listen(5002)
