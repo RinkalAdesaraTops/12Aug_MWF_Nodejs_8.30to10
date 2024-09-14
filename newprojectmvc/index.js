@@ -1,18 +1,20 @@
 var express = require('express')
+const session = require('express-session');
+const flash = require('connect-flash');
 var app = express()
 const adminRoutes = require('./routes/AdminRoutes')
 const SubcatRoutes = require('./routes/subcatRoutes')
 
 app.set('view engine','ejs')
-
+app.use(session({
+    secret:'flashblog',
+    saveUninitialized: true,
+    resave: true
+}));
+  
+app.use(flash());
 app.use(express.urlencoded({ extended: false }));
-var flash = require('express-flash'),
-      express = require('express'),
-      app = express();
- 
-  app.use(express.cookieParser('keyboard cat'));
-  app.use(express.session({ cookie: { maxAge: 60000 }}));
-  app.use(flash());
+
 app.use("/admin",adminRoutes)
 app.use("/subcategory",SubcatRoutes)
 

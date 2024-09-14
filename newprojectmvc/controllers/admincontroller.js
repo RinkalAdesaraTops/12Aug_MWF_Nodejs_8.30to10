@@ -2,9 +2,12 @@ const CategoryModel = require('../models/categorymodel')
 
 const dispcat = async(req,res)=>{
     let result = await CategoryModel.find()
+    //message set 
+    req.flash('info', 'Category get successfully...')
     res.render('category',{
         'allcat':result,
-        'editcat':''
+        'editcat':'',
+        'message':req.flash('info') //ejs file msg render
     })
 }
 const savecat = async(req,res)=>{

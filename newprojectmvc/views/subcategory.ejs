@@ -13,8 +13,6 @@
         <label for="">Category:</label>
         <select name="category">
             <option value="">--Select Category--</option>
-            
-            
             <% catlist.map((i)=>{ %>
                 <option value="<%= i._id%>" <%= editsubcat!='' && editsubcat.category.equals(i._id)?'selected':''%>><%= i.name%></option>
             <% }) %>
