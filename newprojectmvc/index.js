@@ -4,7 +4,7 @@ const flash = require('connect-flash');
 var app = express()
 const adminRoutes = require('./routes/AdminRoutes')
 const SubcatRoutes = require('./routes/subcatRoutes')
-
+const productRoutes = require('./routes/productRoutes')
 app.set('view engine','ejs')
 app.use(session({
     secret:'flashblog',
@@ -14,9 +14,12 @@ app.use(session({
   
 app.use(flash());
 app.use(express.urlencoded({ extended: false }));
+app.use(express.static('public'))
 
 app.use("/admin",adminRoutes)
 app.use("/subcategory",SubcatRoutes)
+app.use("/product",productRoutes)
+
 
 app.get("/",(req,res)=>{
     res.render('home')

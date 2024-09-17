@@ -7,5 +7,30 @@
 </head>
 <body>
     <h3>Product list</h3>
+    <form action="" method="post" enctype="multipart/form-data">
+        <label for="">Category</label>
+        <select name="category" id="category" onchange="changeSubcat()">
+            <option value="">--Select category--</option>
+            <% catlist.map((i)=>{ %>
+                <option value="<%= i._id%>"><%= i.name%></option>
+            <% }) %>
+        </select> <br><br>
+        <label for="">Subcategory</label>
+        <select name="subcategory" id="subcategory">
+            <option value="">--Select subcategory--</option>
+        </select> <br><br>
+        <label for="">Product</label>
+        <input type="text" name="product" id="product"><br><br>
+
+        <label for="">Price</label>
+        <input type="number" name="price" id="price"><br><br>
+
+        <label for="">Image</label>
+        <input type="file" name="image" id="image"><br><br>
+
+        <input type="submit" value="Save Data">
+
+    </form>
+    <script src="../js/script.js"></script>
 </body>
 </html>

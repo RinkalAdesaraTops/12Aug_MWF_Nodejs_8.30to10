@@ -1,5 +1,4 @@
 var express = require('express')
-var app = express()
 var router = express.Router()
 const {subcatform,savesubcat,deleteSubcat,editSubcat} = require('../controllers/subcategorycontroller')
 

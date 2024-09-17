@@ -15,7 +15,8 @@ const subcatform = async(req,res)=>{
     res.render('subcategory',{
         allsubcat:result,
         catlist:catlist,
-        editsubcat:''
+        editsubcat:'',
+        messages:''
     })
 }
 //insert subcategory
@@ -62,8 +63,7 @@ const editSubcat = async(req,res)=>{
         allsubcat:result,
         catlist:catlist,
         editsubcat:subcatdata
-    })
-    
+    })    
 }
 
 module.exports = {subcatform,savesubcat,deleteSubcat,editSubcat}
