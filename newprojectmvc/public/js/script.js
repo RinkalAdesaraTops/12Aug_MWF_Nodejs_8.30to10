@@ -1,7 +1,6 @@
 let cat = document.getElementById('category')
 let subcat = document.getElementById('subcategory')
 
-
 const changeSubcat = ()=>{
     let catid = cat.value
     fetch('/product/getSubcategory/'+catid)
@@ -13,6 +12,5 @@ const changeSubcat = ()=>{
             })
             subcat.innerHTML = tr
         })
-        .catch((err)=>console.log(err))
-        
+        .catch((err)=>console.log(err))   
 }
