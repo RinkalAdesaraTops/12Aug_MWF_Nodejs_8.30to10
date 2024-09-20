@@ -62,7 +62,8 @@ const editSubcat = async(req,res)=>{
     res.render('subcategory',{
         allsubcat:result,
         catlist:catlist,
-        editsubcat:subcatdata
+        editsubcat:subcatdata,
+        messages:''
     })    
 }
 

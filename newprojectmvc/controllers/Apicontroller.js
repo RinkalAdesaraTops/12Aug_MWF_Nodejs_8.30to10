@@ -44,4 +44,14 @@ const delcat = async(req,res)=>{
 
     }
 }
-module.exports = {catlist,savecat,delcat}
+const editcat = async(req,res)=>{
+    let id = req.params.id
+    let result = await CategoryModel.findById(id)
+    if(result){
+        res.json({data:result,msg:"Category detail get successfully..."})
+    } else {
+        res.json({msg:"Error found"})
+
+    }
+}
+module.exports = {catlist,savecat,delcat,editcat}

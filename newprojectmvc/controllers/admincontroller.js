@@ -41,7 +41,8 @@ const editcat = async(req,res)=>{
         let catlist = await CategoryModel.find()
         res.render('category',{
             'allcat':catlist,
-            'editcat':result
+            'editcat':result,
+            'message':''
         })
     }
 }
