@@ -3,6 +3,7 @@ var app = express()
 let catRoutes = require('./routes/categoryroutes')
 
 app.set('view engine','ejs')
+app.use(express.static('public'))
 app.use('/category',catRoutes)
 
 app.get('/',(req,res)=>{
