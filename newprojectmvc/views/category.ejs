@@ -6,7 +6,9 @@
     <title>Document</title>
 </head>
 <body>
-    <h3>Category LIst</h3>
+    <h3>Category List</h3>
+
+    <a href="/user/logout">Logout</a>
     <%= (message!='')?message:''%>
     <form action="/admin/savecat" method="post">
         <input type="hidden" name="catid" value="<%= editcat!=''?editcat._id:''%>">

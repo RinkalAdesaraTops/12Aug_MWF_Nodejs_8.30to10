@@ -1,6 +1,9 @@
 const UserModel = require("../models/usermodel");
+var jwt = require('jsonwebtoken');
+var localStorage = require('localStorage')
 const bcrypt = require('bcrypt')
 let saltRound = 12
+let secretKey = "test@123"
 
 const register = (req,res)=>{
     res.render('register')
@@ -25,20 +28,42 @@ const login = (req,res)=>{
 }
 const checkLogin = async(req,res)=>{
     const {email,pwd} = req.body
-    //pwd = 123456
+   
     let result = await UserModel.find({email:email})
-    if(result){
-        let ans = bcrypt.compareSync(pwd,result.password); 
+   
+    if(result.length > 0){
+        let ans = bcrypt.compareSync(pwd,result[0].password); 
         if(ans){
-            console.log("password done");
+            let data = {
+                name:result[0].name,
+                email:result[0].email
+            }
+            
+            let token = jwt.sign(data,secretKey)
+            result[0].token = token
+            result[0].save()
+            localStorage.setItem('token',token)
+            localStorage.setItem('userid',result[0]._id)
+            res.redirect('/admin/category/')
+            
         } else {
-            console.log("Invalid password");
+            res.redirect('/user/login')
+            
         }
     } else {
-        console.log("Invalid Email");
+        res.redirect('/user/login')
         
     }
     // bcrypt.compareSync(myPlaintextPassword, hash); // true
 }
-
-module.exports = {register,login,checkLogin,saveUser}
+const logout = async(req,res)=>{
+    let getToken = localStorage.getItem('token')
+    let getUserId = localStorage.getItem('userid')
+    let result = await UserModel.findByIdAndUpdate(getUserId,{
+        token:''
+    })
+    if(result){
+        res.redirect('/user/login')
+    }
+}
+module.exports = {register,login,checkLogin,saveUser,logout}
