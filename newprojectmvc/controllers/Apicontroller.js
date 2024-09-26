@@ -1,6 +1,6 @@
 const CategoryModel = require("../models/categorymodel")
 
-const catlist = async(req,res)=>{
+const catlist = async(req,res,next)=>{
     let result = await CategoryModel.find()
     if(result){
         return res.json({
@@ -13,6 +13,7 @@ const catlist = async(req,res)=>{
             data:[]
         })
     }
+    
 }
 const savecat = async(req,res)=>{
     let {catid,name} = req.body

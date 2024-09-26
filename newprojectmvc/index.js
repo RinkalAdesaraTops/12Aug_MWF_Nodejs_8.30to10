@@ -6,7 +6,8 @@ const adminRoutes = require('./routes/AdminRoutes')
 const SubcatRoutes = require('./routes/subcatRoutes')
 const productRoutes = require('./routes/productRoutes')
 const apiRoutes = require('./routes/ApiRoutes')
-app.set('view engine','ejs')
+const userroutes = require('./routes/UserRoutes')
+app.set('view engine','ejs' )
 app.use(session({
     secret:'flashblog',
     saveUninitialized: true,
@@ -21,6 +22,8 @@ app.use("/admin",adminRoutes)
 app.use("/subcategory",SubcatRoutes)
 app.use("/product",productRoutes)
 app.use("/api",apiRoutes)
+app.use("/user",userroutes)
+
 
 
 app.get("/",(req,res)=>{
