@@ -4,11 +4,16 @@ const dispcat = async(req,res)=>{
     let result = await CategoryModel.find()
     //message set 
     req.flash('info', 'Category get successfully...')
-    res.render('category',{
-        'allcat':result,
-        'editcat':'',
-        'message':req.flash('info') //ejs file msg render
+    res.header("Access-Control-Allow-Origin", "*");
+    return res.status(200).json({
+        msg:"Get successfully...",
+        allcat:result
     })
+    // res.render('category',{
+    //     'allcat':result,
+    //     'editcat':'',
+    //     'message':req.flash('info') //ejs file msg render
+    // })
 }
 const savecat = async(req,res)=>{
     let {catid,name} = req.body

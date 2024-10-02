@@ -10,7 +10,6 @@ const {dispcat,savecat,delcat,editcat,product} = require('../controllers/adminco
 
 const verifyToken = (req,res,next)=>{
     let token = localStorage.getItem('token')
-    console.log("token "+token);
     if(token != null){
         try {
             var decoded = jwt.verify(token, secretKey);
@@ -23,16 +22,11 @@ const verifyToken = (req,res,next)=>{
     } else {
         res.send("No authorized user")
     }
-   
-      
-   
 }
-router.get("/category",verifyToken,dispcat)
-router.post("/savecat",verifyToken,savecat)
+router.get("/category",dispcat)
+router.post("/savecat",savecat)
 router.get("/delcat/:id",verifyToken,delcat)
 router.get("/editcat/:id",verifyToken,editcat)
-
 router.get("/product",product)
-
 module.exports = router
 

@@ -28,6 +28,7 @@ const login = (req,res)=>{
 }
 const checkLogin = async(req,res)=>{
     const {email,pwd} = req.body
+    
    
     let result = await UserModel.find({email:email})
    
