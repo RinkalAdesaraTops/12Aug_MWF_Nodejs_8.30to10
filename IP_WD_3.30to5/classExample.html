@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class - Example</title>
+</head>
+<body>
+    <script>
+        class user{
+            constructor(id,name,age){
+                this.id = id
+                this.name = name
+                this.age = age
+            }
+            display(){
+                return this.id+'-- '+this.name+' --'+this.age
+            }
+        }
+        /*const a=10
+        a="sdgfs"
+        a=true
+        a=[]
+        a={} */
+        const obj = new user(101,"RInkal",25)
+        document.write("User Info is "+obj.display())
+        
+    </script>
+</body>
+</html>

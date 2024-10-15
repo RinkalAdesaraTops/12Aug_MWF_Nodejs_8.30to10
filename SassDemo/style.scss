@@ -1,0 +1,23 @@
+$bk:black;
+$wt:white;
+div{
+    p:hover{
+        span{
+            color:red
+        }
+    }
+}
+.abc{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include rinkal(2px,2px)
+}
+.xyz{
+    @extend .abc;
+    @include rinkal(5px,10px);
+}
+@mixin rinkal($m,$p){
+    padding:$p;
+    margin:$p;
+}

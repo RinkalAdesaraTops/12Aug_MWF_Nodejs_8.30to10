@@ -1,0 +1,9 @@
+div p:hover span {
+  color: red;
+}
+
+.abc, .xyz {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}/*# sourceMappingURL=style.css.map */

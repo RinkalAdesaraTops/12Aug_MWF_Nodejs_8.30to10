@@ -1,0 +1,54 @@
+Diff HTML & HTML5
+CSS - Animation
+Box sizing
+Box model
+Grediant
+form
+table
+ul ol li
+* {
+    margin:auto
+}
+diff b/w cellpadding & cellspacing
+rowspan - colspan
+
+hide,show,attr
+bootstrap - color 
+slider
+card
+Modal
+
+javascript
+==, ===
+**
+++,-- === prefix & postfix
+datatypes
+Arrow function = ()=> a*b 
+Array function - splice,slice
+push,pop 
+unshift,shift
+const arr = [11,10,20,33,44,55]
+arr.splice(2,2,4,5,6,7,8,910)
+arr.slice(-1)
+String 
+Math - sqrt,pow,abs
+oops
+class
+object
+constructor
+inheritance
+polymorphism - same name but multiple form
+encapsulation
+abstraction - data hiding
+
+
+
+
+
+
+
+
+
+
+
+

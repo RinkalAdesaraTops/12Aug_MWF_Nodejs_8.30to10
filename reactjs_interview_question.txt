@@ -1,0 +1,16 @@
+React JS
+1)What is diff b/w JS&React js
+2)Lifecycle of React
+3)Features of React js
+4)Limitation of react js
+5)diff b/w state & props
+6)statefull & stateless component diff
+7)controlled & uncontrolled component diff
+8)class-based & function-based component
+9)what is component composition
+10)what is High order component/function
+
+Nodejs
+REPL - Read Evaluate Print Loop
+
+v8

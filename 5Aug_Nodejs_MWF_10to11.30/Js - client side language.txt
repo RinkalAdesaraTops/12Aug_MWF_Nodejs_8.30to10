@@ -1,0 +1,4 @@
+Js - client side language
+Nodejs - server side
+run time environment
+v8 engine

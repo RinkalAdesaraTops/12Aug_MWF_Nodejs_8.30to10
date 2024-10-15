@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = [
+                {
+                    id:101,
+                    name:"test",
+                    age:25,
+                    salary:25000
+                },
+                {
+                    id:102,
+                    name:"abc",
+                    age:19,
+                    salary:26500
+                },
+                {
+                    id:103,
+                    name:"pqr",
+                    age:29,
+                    salary:35000
+                }
+        ]
+        let res = arr.map((i)=>{
+                return i.name               
+        })
+        console.log(res);
+        //filter
+        let data=arr.filter((i)=>{
+                return i.age>20
+        })
+        console.log(data);
+        arr.sort((a,b)=>{
+                return a.age-b.age
+        })
+        console.log(arr);
+        //reduce function
+        let newarr = [1,2,3,4,5]
+        let total = newarr.reduce((total,a)=>{
+            console.log("total is "+total);
+            console.log("a is "+a);
+            
+                return total+a
+        },55)
+        console.log("Total is "+total);
+        
+        let arr_res = ["abc","xyz","abc","p1","q1","xyz","abc"]
+        let result = arr_res.reduce((a,b)=>{
+                if(!a[b]){
+                    a[b] = 1
+                } else {
+                    a[b] += 1
+                }
+                return a
+        },{})
+        console.log(result)   
+        /*
+        {
+            "abc":3,
+            "xyz":2,
+            "p1":1,
+            "q1":1,
+        }
+        */
+let sum1 = [44,55,66,12,3,24] //find out maximum value
+result = sum1.reduce((t,a)=>{
+    console.log("t is "+t);
+    console.log("a is "+a);
+    
+            if(t>a){  //44>55 55>66 66>12
+               a=t //a=66 3>66 24>66
+            }
+            return a
+})
+console.log(result)   
+
+    </script> 
+</body>
+</html>

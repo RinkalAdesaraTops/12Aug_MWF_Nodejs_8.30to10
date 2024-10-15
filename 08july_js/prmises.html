@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //callback function
+        //callback hell -- synchronous
+        //Promises - async-await. promise object
+        //pending
+        //fullfilled - resolve
+        //rejected - canceled
+
+        /*const add=()=>{
+            minus()
+            document.write("fgf djkxfg")
+        }
+        const minus=()=>{
+            multiply()
+        }
+        const multiply=()=>{
+            return "hello"
+        }
+        add() */
+        let pr = new Promise((resolve,reject)=>{
+            let age = prompt("Enter age:")
+            if(age>18){
+                resolve("Eligible 4 vote")
+            } else {
+                reject("Not Eligible 4 vote")
+            }
+        })
+        pr.then((msg)=>{
+            console.log(msg)
+        })
+        .catch((err)=>console.log(err))
+    </script>
+</body>
+</html>

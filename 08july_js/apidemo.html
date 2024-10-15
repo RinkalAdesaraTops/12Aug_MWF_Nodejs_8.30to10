@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="demo"></div>
+    <script>
+        //all data display -- GET
+        //Insert - POST
+        //delete == DELETE
+        //Edit - get idwise record -- PATCH
+        //Update - PUT
+        let a = document.getElementById('demo')
+        fetch("https://fakestoreapi.com/products")
+            .then((ans)=>ans.json())
+            .then((result)=>a.textContent = JSON.stringify(result,null,0))
+    </script>
+</body>
+</html>

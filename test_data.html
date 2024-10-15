@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="searctxt"  id="searctxt" onkeyup="searchData(this)">
+    <div id="demo"></div>
+
+    <script>
+        let tr='';
+        let arr = [
+            {
+                id:101,
+                name:"tets",
+                age:25
+            },
+            {
+                id:101,
+                name:"tets234",
+                age:25
+            },
+            {
+                id:101,
+                name:"gfhfh",
+                age:25
+            }
+        ];
+        const searchData = (e)=>{
+            console.log("value is "+e.value)
+            let arr1 = arr.filter((i)=>{
+                return i.name.includes(e.value) ? i:''
+            })
+            disp(arr1)
+        }
+        const disp = (arr)=>{
+            tr=''
+            arr.map((i)=>{
+                tr+= `<li>${i.name}</li>`;
+            })
+            document.getElementById("demo").innerHTML = tr
+        }
+        disp(arr)
+    </script>
+</body>
+</html>

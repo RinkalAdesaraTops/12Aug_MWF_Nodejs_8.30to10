@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="demo"></div>
+    <div id="demo1"></div>
+    <script>
+        document.getElementById("demo").innerHTML = "Hellooo1"
+        document.getElementById("demo").innerHTML += "Hellooo2"
+        setTimeout(()=>{
+            document.getElementById("demo").innerHTML += "demo123"
+
+        },4000)
+        document.getElementById("demo").innerHTML += "Hellooo3"
+        document.getElementById("demo").innerHTML += "Hellooo4"
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+//class & function
+//state & props
+//Hooks
+-->useState
+-->useEffect
+-->useCallback
+-->useMemo
+-->useRef
+-->useContext
+-->useReducer
+-->useDispatch
+-->custom Hooks - make couterhooks,localstorage, online/offline,like-dislike
+lazy loading
+----------------------**********************-----------------------
+css -- styling
+style component
+module css
+reactstrap
+materialui
+nested router - outlet
+Router - switchrouter & browser router
+/*******************************************************************/
+
+
+------------************************------------------------
+Fake API - fetch then
+Axios package
+JSON server
+API testing using postman
+------------------*******************------------------
+
+Redux
+-->redux-thunk
+-->redux-saga
+-->redux-persist
+RTK
+Firebase CRUD
+Deployement with Github netlify render app

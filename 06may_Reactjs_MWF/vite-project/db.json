@@ -1,0 +1,22 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Test123",
+      "age": 25,
+      "salary": 24000
+    },
+    {
+      "id": 2,
+      "name": "Abcxyz",
+      "age": "29",
+      "salary": "30000"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "pname": "dfsgdfg"
+    }
+  ]
+}

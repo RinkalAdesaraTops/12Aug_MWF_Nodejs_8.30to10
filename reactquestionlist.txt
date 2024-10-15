@@ -1,0 +1,11 @@
+What is JS 
+What is React js 
+Diff b/w JS & react js
+Diff b/w DOM and virtual DOM
+Command to create react project using npx
+Command to create react project using vite
+what is state
+what is props
+what is class component
+what is functional component 
+what is JSX

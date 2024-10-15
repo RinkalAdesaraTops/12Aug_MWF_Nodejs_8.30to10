@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+class baseclass{ //super,parent class
+  public:
+    void display(){
+        cout<<"Base class func called.."<<endl;
+    }
+};
+class derivedclass:public baseclass 
+{
+    public:
+        void disp_child(){
+            cout<<"Display child function called.."<<endl;
+        }
+};
+int main(){
+    derivedclass d1;
+    d1.disp_child();
+    d1.display();
+}
+
+
+

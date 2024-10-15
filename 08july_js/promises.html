@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="demo"></div>
+    <div id="demo1"></div>
+    <script>
+        setTimeout(()=>{
+            document.getElementById('demo').innerHTML = "Hiii"
+        },3000)
+        setTimeout(()=>{
+            document.getElementById('demo1').innerHTML = "Hello1"
+        },1000)
+        setTimeout(()=>{
+            document.getElementById('demo1').innerHTML += "Hello2"
+        },1000)
+        setTimeout(()=>{
+            document.getElementById('demo1').innerHTML += "Hello3"
+        },1000)
+        setTimeout(()=>{
+            document.getElementById('demo1').innerHTML += "Hello4"
+        },1000)
+        setTimeout(()=>{
+            document.getElementById('demo1').innerHTML += "Hello5"
+        },1000)
+
+
+        // settimeout & setinterval
+        //100 line code -99
+        //67 line code  0 settimeout function -queue store - firstin first out
+let pr = new Promise((resolve,reject)=>{
+    let age = 25
+    reject("error msg")
+    // if(age>18){
+        resolve("fdghdjkgh")
+    // } else {
+         
+    // }
+})
+pr.then((msg)=>console.log(msg))
+.then(()=>console.log("fg dfgh dfghj"))
+.catch((msg)=>console.log("helloo"+msg))
+let i=1
+setInterval(()=>{
+    if(i==10){
+        document.write(101)
+
+    } else {
+        document.write(i++)
+
+    }
+},1000)
+    </script>
+</body>
+</html>
