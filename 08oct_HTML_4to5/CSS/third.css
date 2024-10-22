@@ -1,0 +1,35 @@
+p{
+    color:blue
+}
+
+div > p {
+    color:red
+}
+a:hover{
+    color:chocolate
+}
+#demo:active{
+    color:yellow
+}
+
+#demo:visited{
+    color:crimson
+}
+#d1:active{
+    color:yellow
+}
+
+#d1:visited{
+    color:crimson
+}
+button:active{
+    color:darkolivegreen;
+    background-color: cadetblue;
+}
+input:focus{
+    color:fuchsia;
+    background-color: lightgreen;
+}
+
+
+

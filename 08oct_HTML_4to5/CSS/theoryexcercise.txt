@@ -1,0 +1,12 @@
+what is css?
+Why we can use css
+How many types of css
+how can we use selector
+-->tag name
+classname
+Id
+What is box model -- CPBM 
+content/text
+padding
+border
+margin

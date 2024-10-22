@@ -1,0 +1,14 @@
+
+#demo{
+    height:100px;
+    width:100px;
+    background-color: aqua;
+    border:2px solid black;
+    margin:20px;
+    transition: width 3s,height 4s; 
+}
+#demo:hover{
+    transform: scale(3,2);
+    /* transform: rotate(60deg); */
+    background-color: brown;
+}

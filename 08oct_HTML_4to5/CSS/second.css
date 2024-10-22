@@ -1,0 +1,19 @@
+/* UNiversal all */
+*{ 
+    margin:0;
+    padding:0;
+}
+#demo,h3,h4{
+    color:blue;
+    background-color: chartreuse;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    border-width:3px;
+    border-style: dotted;
+    border-color:brown;
+    /* border:2px solid black; */
+    float: left;
+    padding:5px;
+    margin:10px;
+}

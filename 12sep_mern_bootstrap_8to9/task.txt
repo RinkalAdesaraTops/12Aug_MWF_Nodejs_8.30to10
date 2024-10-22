@@ -1,0 +1,13 @@
+Name
+email
+password
+gender = radio button
+qualification -= checkbox
+image 
+address 
+city - dropdown
+
+submit button
+
+login form - email/username
+password
