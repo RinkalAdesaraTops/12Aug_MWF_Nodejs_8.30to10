@@ -1,11 +1,10 @@
 var express = require('express')
-const { add, display } = require('../controllers/CategoryController')
+const { add, display,deleteData,editData } = require('../controllers/CategoryController')
 var router = express.Router()
 
-router.get('/',(req,res)=>{
-    res.send('category list')
-})
-router.get('/add',add)
-router.get('/disp',display)
+router.get('/',display)
+router.get('/del/:id',deleteData)
+router.get('/edit/:id',editData)
+router.post('/add',add)
 
 module.exports = router

@@ -1,0 +1,18 @@
+.box{
+    height: 300px;
+    width: 300px;
+    background-color: rgb(143, 143, 146);
+    margin: 10px;
+    padding:25px;
+    color:yellow;
+    /* block inline inline-block none */
+    display: inline-block;
+}
+span {
+    /* display: none; */
+    border:2px solid #a58686;
+    /* color name, code, RGB() */
+    /* font-size: 20px; */
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 700;
+}
