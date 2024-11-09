@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //palindrom no  = 151 = 151
+        let n = 1441 //142
+        let f=n
+        //1*10 = 10+4 =14  14*10=140+2 = 142
+        let rev =0
+        while(n>0){
+            let r = n%10; //241%10=1 24%10=4 2%10 =2
+            document.write('<br> Reminder is '+r)
+            rev = (rev*10)+r  //0*10+1 = 1 1*10+4 = 14 14*10+2= 142
+            document.write('<br> -------------------------')
+            document.write('<br> Reverse no is '+rev)
+            n = Math.floor(n/10) //241/10 = 24.1=24 24/10=2.4=2 2/10=0.2=0
+        }
+        document.write('<br> Reverse is '+rev)
+        if(f==rev){
+            document.write('<br> It is palindrom')
+        } else {
+            document.write('<br> It is not palindrom')
+        }
+    </script>
+</body>
+</html>

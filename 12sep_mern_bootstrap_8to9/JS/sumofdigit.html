@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let no = 245 //2 3 5
+        let sum = 0
+        let m=1
+        while(no>0){
+            let r=no%10 //235 % 10 = 5 23%10 = 3
+            no = Math.floor(no/10) //235/10 = 23.5 = 23
+            sum = sum+r
+            m = m*r
+        }
+        document.write('<br> Sum of digits are '+sum)
+        document.write('<br> Multiplication of digits are '+m)
+    </script>
+</body>
+</html>
